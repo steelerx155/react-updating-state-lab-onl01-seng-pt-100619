@@ -3,23 +3,24 @@ import React from 'react';
 
 class DigitalClicker extends React.Component{
     constructor(){
-    super();
+    super()
     this.state = { 
-        timesClicked: 0, };
+        timesClicked: 0}
     
     }
 
     handleClick = () => {
         this.setState(previousState => ({
-          timesClicked: previousState.timesClicked + 1
+          numClicked: previousState.numClicked + 1
           }))
       }
 
 
 render() {
-    return (      
-        <button onClick={this.handleClick}>{this.state.timesClicked}</button>
-      
+    return (
+      <div>
+        <button onClick={this.handleClick}>Digital Clicker!</button>
+      </div>
     );
   }
 }export default DigitalClicker
